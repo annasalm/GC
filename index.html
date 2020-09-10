@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Capital</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <header>
+        <div class="main-wrapper">
+            <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a class="dropdown-controller" href="#">
+                            Языки
+                        </a>
+                        <div class="dropdown hidden">
+                            <ul>
+                                <li>aaa</li>
+                                
+                                <li>aaa</li>
+                                <li>aaa</li>
+                                <li>aaa</li>
+                                <li>aaa</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="afterLogin"><a href="https://grandcapital.net/my/webtrader/">Login to WebTrader</a></li>
+                    <li class="phone-number_header"><a><img href="https://grandcapital.net/about/partner_offices/">
+                        <img src="src/планетка.png" width="18px" height="18px">+1 646 844 7187</a></li>
+                    <li><a href="#">коллбэк</a></li>
+                    <li><a href="#">We are offline</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Sign in/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="main-board">
+            <div class="main-wrapper">
+                <div class="logo"></div> 
+                <div class="bonus_main-info">
+                    <div class="bonus-left-block">
+                        <h1>Adding</h1>
+                        <p>+40%</p>
+                        <h2>with EVERY deposit</h2>
+
+                    </div>
+                    <div class="right-block">
+                        <div class="sign_in">
+                            <div class="SRbutton">
+                                <h1>Sign in</h1>
+                                <h1>Registration</h1>
+                            </div>
+                            <div>
+                                <input type="input" class="form__field" 
+                                placeholder="Email or phone" name="name" id='name' required />
+                                <input type="password" class="form__field" 
+                                placeholder="Password" name="password" id='psw' required />
+                                                
+                            </div>   
+                                
+                            <br>
+                                <label><input type="checkbox">Remember me</label>
+                            </br>
+                            <a href="#" class="main-board_button-link">
+                                <div>Login</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-calculate">
+            <div class="main-wrapper">
+                <h2>Calculate your deposit bonus</h2>
+                <div class="calculation">
+                    <div class="math">
+                        <p>Deposit amount</p>
+                        <input type="number" class="nmb-1" id=deposit-amount-input>
+                    </div>
+                    <div class="curr">
+                        <p>Deposit currency</p>
+                        <input type="field" class="nmb-2" placeholder="USD">
+                    </div>
+                    <div class="yourBonus">
+                        <p>Your bonus</p>
+                        <div class="border_field">
+                            <h4>40%</h4>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <input type="field" readonly class="nmb-1" id="total-input">
+                    </div>
+                </div>
+                <div class="personal-inf">
+                    <div class="CalcName">
+                        <p>Name</p>
+                        <input type="field" class="nmb-1">
+                    </div>
+                    <div class="CalcName">
+                        <p>last name</p>
+                        <input type="field" class="nmb-1">
+                    </div>
+                    <div>
+                        <p>e-mail</p>
+                        <input type="field"class="nmb-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+<script>
+    var inputElement = document.getElementById("deposit-amount-input");
+    var outputElement = document.getElementById("total-input");
+    inputElement.oninput = function () {
+        var inputValue = inputElement.value;
+        var outputValue = inputValue * 1.4;
+        outputElement.value = Math.round(outputValue*10) / 10;
+    }
+</script>
+</html>
